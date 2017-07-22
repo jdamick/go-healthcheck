@@ -61,7 +61,7 @@ CheckFunc is a convenience type that implements Checker.
 Another way of registering a check could be by using an anonymous function and the convenience method RegisterFunc. An example that makes the status endpoint always return an error:
 
 ```go
- health.RegisterFunc("my_check", func() error {
+health.RegisterFunc("my_check", func() error {
   return Errors.new("This is an error!")
 }))
 ```
