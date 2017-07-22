@@ -84,7 +84,7 @@ You could also use the health checker mechanism to ensure your application only 
 
 You can also use the predefined Checkers that come included with the health package. First, import the checks:
 
-`import "github.com/docker/distribution/health/checks`
+`import "github.com/docker/distribution/health/checks"`
 
 After that you can make use of any of the provided checks. An example of using a `FileChecker` to take the application out of rotation if a certain file exists can be done as follows:
 
