@@ -72,9 +72,9 @@ You could also use the health checker mechanism to ensure your application only 
 
 ```go
  updater = health.NewStatusUpdater()
-  health.RegisterFunc("database_check", func() error {
+ health.RegisterFunc("database_check", func() error {
    return updater.Check()
- }))
+ })
 
  conn, err := Connect(...) // database call here
  if err != nil {
