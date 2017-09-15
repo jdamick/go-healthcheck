@@ -20,4 +20,10 @@ coverage: bin/gocovmerge
 .PHONY: bin/gocovmerge
 bin/gocovmerge:
 	go install ./cov/github.com/wadey/gocovmerge
+
+.PHONY: add-gocovmerge-local
+add-gocovmerge-local:
+	go get github.com/wadey/gocovmerge
+	mkdir -p ./cov/github.com/wadey/
+	cp -R $$GOPATH/src/github.com/wadey/gocovmerge ./cov/github.com/wadey/
 	-rm -rf ./cov/github.com/wadey/gocovmerge/.git
