@@ -20,3 +20,4 @@ coverage: bin/gocovmerge
 .PHONY: bin/gocovmerge
 bin/gocovmerge:
 	go install ./cov/github.com/wadey/gocovmerge
+	-rm -rf ./cov/github.com/wadey/gocovmerge/.git
